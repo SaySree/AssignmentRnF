@@ -1,0 +1,56 @@
+@import '../../scss/breakpoints';
+@import '../../scss/colors';
+@import '../../scss/typography';
+
+$drop-shadow: rgba(0, 0, 0, .2);
+
+#circle {
+    background: #f00;
+    width:  100 + px;
+    height: 100 + px;
+    border-radius: 50%;
+}
+
+.results {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  flex-flow: row wrap;
+}
+
+.results__item {
+  display: flex;
+  position: relative;
+  margin: 0 1% 15px;
+  box-shadow: 0 3px 20px $drop-shadow;
+  background: $card-bg;
+  padding: 15px 20px;
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+  flex-direction: column;
+
+  @media screen and (min-width: $laptop) {
+    width: 48%;
+  }
+
+  @media screen and (min-width: $large-desktop) {
+    width: 31.3333%;
+  }
+}
+
+.results__title {
+  display: inline-block;
+  margin: 0 0 10px;
+  border-bottom: 1px solid $highlight-color;
+  padding-bottom: 3px;
+  line-height: 2rem;
+  font-family: $header-font;
+  font-size: 1.5rem;
+
+  span {
+    font-size: 1rem;
+  }
+}
